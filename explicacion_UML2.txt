@@ -20,6 +20,10 @@ La clase Meseros puede imprimir la cuenta en caso de que tenga permiso.
 
 La clase cuenta tiene el numero de mesa de los clientes, el numero de personas, al igual que una lista con los alimentos que han pedido. Esta lista será utilizada para modificar el inventario una vez que se imprima la cuenta.
 
+Funcionamiento del programa:
+Una vez que se creó el inventario al igual que al menos una clase de administrador y otra de mesero se puede empezar a trabajar.
+El mesero inicia sesión con su contraseña. A continuación crea una cuenta en la que debe ingresar la mesa en la que sentaron los clientes al igual que la cantidad de clientes que hay por mesa. Posteriormente añade a la cuenta los alimentos que se están consumiendo. Un mismo mesero puede atender a distintas mesas (debe crear varias cuentas). Si el mesero sale de la cuenta, permite que otros entren a la suya utilizando su contraseña. Si el turno de un mesero está por acabar, puede transferir sus cuentas a otro mesero (ya que de lo contrario estas no podrán ser modificadas). Para hacer la transferencia, debe ingresar el nombre y la contraseña del otro mesero. En caso de tener permiso, los meseros podrán imprimir la cuenta, lo que actualiza el inventario y elimina dicha cuenta de la sesión del mesero.
+
 Casos en los que harían que el proyecto dejara de funcionar:
 
 -Si el mesero sale de su sesión sin transferir las cuentas que tenga, estas se perderán
