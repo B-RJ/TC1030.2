@@ -1,0 +1,29 @@
+Bruno Ramos Jiménez A01701464
+Explicación del UML
+
+La clase principal es Restaurante. Tiene un nombre y una capacidad máxima de clientes.
+
+	Unido a la clase Restaurante por agregación está la clase inventario (el inventario se crea fuera de la clase restaurante, ya que hay casos en los que dos restaurantes comparten el mismo inventario)
+
+La clase inventario contiene listas con los distintos tipos de alimentos que tiene el restaurante. La idea es que cuando se imprima una cuenta, se modifiquen las listas de alimentos del inventario
+
+	Unido a la clase Restaurante por composición está la clase Sesiones (las sesiones se crean dentro del restaurante)
+
+La clase Sesiones contiene el nombre del usuario al igual que su contraseña
+
+	Unido a la clase sesiones por herencia se encuentra Administrador y Meseros
+
+La clase Administrador tiene acceso a las contraseñas guardadas y puede dar o revocar el permiso de imprimir a cualquiera de las otras cuentas. También puede eliminar cuentas
+La clase Meseros puede imprimir la cuenta en caso de que tenga permiso.
+
+	Unido a la clase Meseros por composición se encuentra Cuenta (ya que los meseros las crean y en caso de que no transfieran la cuenta a otro mesero, esta se perderá si sale de la sesión el mesero).
+
+La clase cuenta tiene el numero de mesa de los clientes, el numero de personas, al igual que una lista con los alimentos que han pedido. Esta lista será utilizada para modificar el inventario una vez que se imprima la cuenta.
+
+Casos en los que harían que el proyecto dejara de funcionar:
+
+-Si el mesero sale de su sesión sin transferir las cuentas que tenga, estas se perderán
+-Si no se imprime la cuenta, no se modificarán los alimentos del inventario
+-La manera en la que se piensa manejar el inventario es que será una lista del nombre del alimento. Si hay dos del mismo tipo, aparecerá dos veces el alimento. Si se escribe mal el nombre del alimento al momento de guardarlo en el inventario, o al hacer la cuenta, este no se eliminará correctamente del inventario.
+-Ninguna de las listas de alimentos puede llevar números, las cantidades se indican con las veces que está escrito el nombre
+-Si no se crea una cuenta de administrador, no se podrán cambiar permisos ni eliminar cuentas
