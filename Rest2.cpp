@@ -112,7 +112,7 @@ class Restaurante{
 		Restaurante(string n, int cm, string no, int c, string ps){
 			nombre = n;
 			capacidad_max = cm;
-			Administrador admin1(no,c,ps);
+		 Administrador admin1(no,c,ps);
 			
 		}			
 };
