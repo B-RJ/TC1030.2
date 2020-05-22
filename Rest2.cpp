@@ -34,7 +34,7 @@ void Sesion :: set_usuario(string u){
 
 class Administrador : public Sesion{
 	private:
-		int palabra_secreta;
+		string palabra_secreta;
 	public:
 		int get_contrasena(string u);
 		void permitir_imprimir_cuenta(string u);
@@ -42,7 +42,9 @@ class Administrador : public Sesion{
 		void set_contrasena(int c, int ps); //metodo sobreescrito
 		
 		Administrador(){}
-		Administrador(string u, int c): Sesion(u,c){}
+		Administrador(string u, int c, string ps): Sesion(u,c){
+			palabra_secreta = ps;
+		}
 };
 
 int Administrador :: get_contrasena(string u){
@@ -107,10 +109,10 @@ class Restaurante{
 		void actualizar_sesiones(Sesion s);
 		
 		Restaurante(){}
-		Restaurante(string n, int cm, string no, int c){
+		Restaurante(string n, int cm, string no, int c, string ps){
 			nombre = n;
 			capacidad_max = cm;
-			Administrador admin1(no,c);
+			Administrador admin1(no,c,ps);
 			
 		}			
 };
