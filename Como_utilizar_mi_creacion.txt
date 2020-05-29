@@ -1,0 +1,12 @@
+Lo que hace el programa:
+
+Te pide el número de cuentas mesero que quieres crear en el restaurante (no el que tiene antro)
+Te pide nombre, por lo que hay que ingresar un string
+Te pide contraseña, por lo que hay que ingresar un INT 
+
+Posteriormente te pide que ingreses el nombre de la cuenta a la que le quieres cambiar la 
+contraseña
+
+Ingresas nueva contraseña 
+
+Muchas gracias por su atención. 
